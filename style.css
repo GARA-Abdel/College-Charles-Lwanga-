@@ -1,0 +1,569 @@
+/* ============================================
+   COLLÈGE CHARLES LWANGA - NOUNA
+   Feuille de style principale
+   ============================================ */
+
+/* ---------- Variables ---------- */
+:root {
+    --bleu: #1e3a8a;
+    --bleu-fonce: #152a63;
+    --or: #f59e0b;
+    --or-fonce: #d97706;
+    --fond: #f8fafc;
+    --blanc: #ffffff;
+    --texte: #1e293b;
+    --gris: #64748b;
+    --bordure: #e2e8f0;
+}
+
+/* ---------- Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: var(--fond);
+    color: var(--texte);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--bleu);
+    text-decoration: none;
+}
+
+/* ---------- Typographie ---------- */
+h1, h2, h3, h4 {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--bleu);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ---------- Header / Navigation ---------- */
+header {
+    background-color: var(--blanc);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--bleu);
+    font-size: 1.05rem;
+}
+
+.logo-badge {
+    background-color: var(--bleu);
+    color: var(--or);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.logo span small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--gris);
+    line-height: 1.2;
+}
+
+/* Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: var(--texte);
+    font-weight: 500;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--bleu);
+    border-bottom-color: var(--or);
+}
+
+/* Bouton hamburger (mobile) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--bleu);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+/* ---------- Hero (bannière) ---------- */
+.hero {
+    background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-fonce) 100%);
+    color: var(--blanc);
+    text-align: center;
+    padding: 4rem 1rem 5rem;
+}
+
+.hero h1 {
+    color: var(--blanc);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    color: #e0e7ff;
+}
+
+.hero .devise {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem 1rem;
+    background-color: rgba(245, 158, 11, 0.15);
+    border: 1px solid var(--or);
+    border-radius: 20px;
+    color: var(--or);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---------- Boutons ---------- */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--or);
+    color: var(--bleu-fonce);
+}
+
+.btn-primary:hover {
+    background-color: var(--or-fonce);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--blanc);
+    border-color: var(--blanc);
+}
+
+.btn-outline:hover {
+    background-color: var(--blanc);
+    color: var(--bleu);
+}
+
+/* ---------- Mise en page générale ---------- */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title h2 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--or);
+    border-radius: 2px;
+}
+
+/* ---------- Cartes ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--blanc);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--bordure);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.1);
+    border-color: var(--or);
+}
+
+.card h3 {
+    color: var(--bleu);
+    margin-bottom: 0.75rem;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ---------- Chiffres clés ---------- */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    background-color: var(--blanc);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--or);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--bleu);
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--gris);
+}
+
+/* ---------- Citation ---------- */
+.quote {
+    background-color: var(--blanc);
+    padding: 2rem;
+    border-left: 4px solid var(--or);
+    border-radius: 6px;
+    font-style: italic;
+    color: var(--texte);
+}
+
+.quote-author {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--bleu);
+    font-size: 0.95rem;
+}
+
+/* ---------- Listes ---------- */
+ul.liste {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.liste li {
+    padding: 0.5rem 0 0.5rem 1.75rem;
+    position: relative;
+}
+
+ul.liste li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--or);
+    font-weight: 700;
+}
+
+/* ---------- Tableau (horaires) ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanc);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--bordure);
+}
+
+th {
+    background-color: var(--bleu);
+    color: var(--blanc);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ---------- Contact ---------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-info p {
+    margin-bottom: 0.75rem;
+}
+
+.contact-info strong {
+    color: var(--bleu);
+    display: inline-block;
+    min-width: 100px;
+}
+
+/* Encadré "Appelez-nous" */
+.call-box {
+    background-color: var(--blanc);
+    border-left: 5px solid var(--or);
+    border-radius: 8px;
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.08);
+}
+
+.call-box h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.call-number {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: var(--fond);
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--bleu);
+    transition: all 0.2s;
+}
+
+.call-number:hover {
+    background-color: var(--bleu);
+    color: var(--blanc);
+}
+
+.call-number .icon {
+    font-size: 1.4rem;
+}
+
+.call-box .note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--gris);
+    font-style: italic;
+}
+
+/* ---------- Carte Google Maps ---------- */
+.map-container {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    display: block;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--bleu-fonce);
+    color: #cbd5e1;
+    padding: 2.5rem 1rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+footer h4 {
+    color: var(--or);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+footer p, footer a {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    color: var(--or);
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+    border-top: 1px solid #334155;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* ---------- Responsive (mobile) ---------- */
+@media (max-width: 768px) {
+
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.35rem; }
+
+    .hero {
+        padding: 3rem 1rem 4rem;
+    }
+
+    .hero h1 { font-size: 1.7rem; }
+    .hero p { font-size: 1rem; }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--blanc);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-menu.open {
+        max-height: 400px;
+    }
+
+    .nav-menu li {
+        border-top: 1px solid var(--bordure);
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 0.9rem 1.5rem;
+        border-bottom: none;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        background-color: var(--fond);
+        border-bottom: none;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .stats {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-number { font-size: 1.6rem; }
+}
